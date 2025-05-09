@@ -1,6 +1,9 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
 @layer base {
     body {
-        background-color: #f8fafc;
+        font-family: "Inclusive Sans", serif;
+        background-color: #fff;
         color: #1c4167;
     }
 }

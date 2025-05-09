@@ -4,12 +4,15 @@ useHead({
 });
 
 const handleViewLogin = () => {
-    navigateTo('/auth/login');
+	navigateTo('/auth/login');
 };
 </script>
+
 <template>
-    <div>
-        <h1>Sistema de facturación</h1>
-        <button @click="handleViewLogin">Iniciar sesión</button>
-    </div>
+	<div>
+		<h1>Sistema de facturación</h1>
+		<UButton @click="handleViewLogin">
+			Iniciar sesión
+		</UButton>
+	</div>
 </template>
