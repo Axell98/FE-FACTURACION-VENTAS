@@ -1,18 +1,15 @@
 <script lang="ts" setup>
+definePageMeta({
+	middleware: 'auth',
+});
+
 useHead({
 	title: 'Home',
 });
-
-const handleViewLogin = () => {
-	navigateTo('/auth/login');
-};
 </script>
 
 <template>
-	<div>
+	<BaseLayout>
 		<h1>Sistema de facturación</h1>
-		<UButton @click="handleViewLogin">
-			Iniciar sesión
-		</UButton>
-	</div>
+	</BaseLayout>
 </template>
