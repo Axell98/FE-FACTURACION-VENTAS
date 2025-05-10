@@ -25,9 +25,29 @@ const items = ref([
 </script>
 
 <template>
-	<header class="fixed top-0 flex items-center w-full h-[65px] px-3 bg-white">
+	<header class="fixed top-0 flex items-center w-full h-[65px] px-3 bg-white border-b border-gray-300">
 		<p>Sistema de Facturación</p>
-		<div class="ms-auto flex items-center">
+		<div class="ms-auto flex items-center gap-1.5">
+			<UButton
+				color="neutral"
+				variant="ghost"
+				size="lg"
+			>
+				<UIcon
+					name="i-lucide-bell"
+					class="size-5"
+				/>
+			</UButton>
+			<UButton
+				color="neutral"
+				variant="ghost"
+				size="lg"
+			>
+				<UIcon
+					name="i-lucide-circle-help"
+					class="size-5"
+				/>
+			</UButton>
 			<UDropdownMenu
 				:items="items"
 				:content="{
@@ -38,7 +58,11 @@ const items = ref([
 					item: 'py-2.5',
 				}"
 			>
-				<button class="flex items-center">
+				<UButton
+					color="neutral"
+					variant="ghost"
+					class="hover:cursor-pointer"
+				>
 					<UAvatar
 						alt="Axel Valle"
 						size="md"
@@ -55,7 +79,7 @@ const items = ref([
 						name="i-lucide-chevron-down"
 						class="size-5"
 					/>
-				</button>
+				</UButton>
 			</UDropdownMenu>
 		</div>
 	</header>

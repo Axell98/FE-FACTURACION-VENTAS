@@ -10,6 +10,10 @@ useHead({
 
 <template>
 	<BaseLayout>
-		<h1>Sistema de facturación</h1>
+		<div class="w-full bg-white p-3 rounded-md">
+			<h1 class="font-bold text-1xl">
+				Dashboard
+			</h1>
+		</div>
 	</BaseLayout>
 </template>
