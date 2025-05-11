@@ -7,6 +7,9 @@ export default defineNuxtConfig({
 	},
 	devtools: { enabled: false },
 	css: ['~/assets/css/main.css'],
+	ui: {
+		colorMode: false,
+	},
 	runtimeConfig: {
 		public: {
 			urlApi: process.env.BASE_API_URL,

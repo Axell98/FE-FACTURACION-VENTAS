@@ -1,14 +1,12 @@
 const useApiAuth = () => {
 	const config = useRuntimeConfig();
+	const headers = useHeaders();
 
 	const login = async (credentials: { usuario: string; password: string }) => {
 		try {
 			const response = await fetch(`${config.public.urlApi}/auth/login`, {
 				method: 'POST',
-				headers: {
-					'Accept': 'application/json',
-					'Content-Type': 'application/json',
-				},
+				headers,
 				body: JSON.stringify(credentials),
 				credentials: 'include',
 			});
@@ -20,15 +18,11 @@ const useApiAuth = () => {
 		}
 	};
 
-	const profile = async (token: string) => {
+	const profile = async () => {
 		try {
 			const response = await fetch(`${config.public.urlApi}/auth/profile`, {
 				method: 'GET',
-				headers: {
-					'Accept': 'application/json',
-					'Content-Type': 'application/json',
-					'Authorization': `Bearer ${token}`,
-				},
+				headers,
 				credentials: 'include',
 			});
 			return await response.json();
@@ -39,15 +33,11 @@ const useApiAuth = () => {
 		}
 	};
 
-	const logout = async (token: string) => {
+	const logout = async () => {
 		try {
 			const response = await fetch(`${config.public.urlApi}/auth/logout`, {
 				method: 'POST',
-				headers: {
-					'Accept': 'application/json',
-					'Content-Type': 'application/json',
-					'Authorization': `Bearer ${token}`,
-				},
+				headers,
 				credentials: 'include',
 			});
 			return response.ok;
