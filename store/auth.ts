@@ -58,20 +58,20 @@ export const useAuthStore = defineStore('auth', {
 		async checkAuth() {
 			if (!this.token) return false;
 			const api = useApiAuth();
-			const result = await api.profile(this.token);
+			const result = await api.profile();
 			if (!result || result.status === false) {
 				this.clearAuth();
 				this.loading = false;
 				return false;
 			}
-			this.setUser(result.data.userData);
+			this.setUser(result.data);
 			this.loading = false;
 			return true;
 		},
 		async logout() {
 			if (!this.token) return;
 			const api = useApiAuth();
-			await api.logout(this.token);
+			await api.logout();
 			this.clearAuth();
 			await navigateTo('/auth/login');
 		},

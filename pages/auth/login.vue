@@ -41,7 +41,7 @@ const onSubmit = async () => {
 	<div class="flex w-full min-h-screen h-full">
 		<div class="relative flex items-center w-full max-w-[520px] shadow-2xl bg-white">
 			<div class="w-[60%] mx-auto">
-				<h1 class="text-2xl mb-4">
+				<h1 class="font-lexend font-bold text-2xl mb-4">
 					Iniciar sesión
 				</h1>
 				<UAlert

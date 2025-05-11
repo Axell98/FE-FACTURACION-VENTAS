@@ -29,6 +29,7 @@ export default defineNuxtConfig({
 	googleFonts: {
 		families: {
 			'Inclusive+Sans': [400, 500, 700],
+			'Lexend': [500],
 		},
 	},
 	veeValidate: {

@@ -1,9 +1,14 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme {
+  --font-lexend: 'Lexend', serif;
+}
+
 @layer base {
     body {
         font-family: "Inclusive Sans", serif;
-        background-color: #dadee5;
+        background-color: #eeeeee;
         color: #1c4167;
     }
 }
